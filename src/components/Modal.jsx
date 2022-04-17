@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 import CerrarBrn from '../img/cerrar.svg'
 import Mensaje from './Mensaje'
 
-const Modal = ({setModal, animarModal, setAnimarModal, guardarGasto, gastoEditar, setGastosEditar}) => {
+const Modal = ({setModal, animarModal, setAnimarModal, guardarGasto, gastoEditar, setGastoEditar}) => {
 
     const [nombre, setNombre] = useState('')
     const [cantidad, setCantidad] = useState('')
@@ -37,7 +37,7 @@ const Modal = ({setModal, animarModal, setAnimarModal, guardarGasto, gastoEditar
 
     const ocultarModal = () => {
         setAnimarModal(false)
-        setGastosEditar({})
+        setGastoEditar({})
         setTimeout(()=>{
             setModal(false)
         },500)
@@ -53,12 +53,12 @@ const Modal = ({setModal, animarModal, setAnimarModal, guardarGasto, gastoEditar
                 {mensaje && <Mensaje tipo="error">{mensaje}</Mensaje>}
                 <div className="campo">
                     <label htmlFor="nombre">Nombre gasto</label>
-                    <input type="text" placeholder='Escribe el nombre del gasto' id="nombre" value={nombre} onChange={e => setNombre(e.target.value)} />
+                    <input autoComplete='off' type="text" placeholder='Escribe el nombre del gasto' id="nombre" value={nombre} onChange={e => setNombre(e.target.value)} />
                 </div>
 
                 <div className="campo">
                     <label htmlFor="cantidad">Cantidad</label>
-                    <input type="text" placeholder='Escribe la cantidad del gasto Ej: 10000' id="cantidad" value={cantidad} onChange={e => setCantidad(Number(e.target.value))} />
+                    <input autoComplete='off' type="text" placeholder='Escribe la cantidad del gasto Ej: 10000' id="cantidad" value={cantidad} onChange={e => setCantidad(Number(e.target.value))} />
                 </div>
 
                 <div className="campo">

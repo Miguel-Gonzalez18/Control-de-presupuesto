@@ -28,10 +28,18 @@ html {
 }
 
 h1 {
-    font-size: 4rem;
+    font-size: 2.5rem;
 }
 h2 {
-    font-size: 3rem;
+    font-size: 4rem;
+}
+@media (max-width: 768px){
+    h1{
+        font-size: 2.5rem;
+    }
+    h2{
+        font-size: 2.5rem;
+    }
 }
 
 .sombra {
@@ -65,6 +73,9 @@ header h1 {
     .formulario {
         padding: 5rem 0;
         width: 60rem;
+    }
+    header h1{
+        font-size: 4rem;
     }
 }
 .formulario legend {
@@ -145,8 +156,7 @@ header h1 {
     border-left: 5px solid #b91c1c;
     color: #b91c1c;
 }
-.alerta.success {
-}
+
 
 .contenedor {
     width: 90%;
@@ -197,12 +207,13 @@ header h1 {
 .contenido-presupuesto p {
     font-weight: 400;
     color: var(--gris-oscuro);
-    font-size: 2.4rem;
+    font-size: 2rem;
     text-align: center;
 }
 @media (min-width: 768px) {
     .contenido-presupuesto p {
         text-align: left;
+        font-size: 2.4rem;
     }
 }
 .contenido-presupuesto p.negativo,
@@ -239,6 +250,15 @@ main {
     display: flex;
     align-items: center;
     gap: 2rem;
+    flex-direction: row;
+}
+@media (max-width: 768px) {
+    .filtros .campo{
+        flex-direction: column;
+    }
+    .filtros .campo label{
+        font-size: 2.5rem;
+    }
 }
 .filtros label {
     font-size: 3rem;
@@ -275,6 +295,12 @@ main {
     width: 100%;
 }
 
+@media (max-width: 768px){
+    .gasto{
+        flex-direction: column;
+    }
+}
+
 .cantidad-gasto {
     font-size: 2.4rem;
     color: var(--negro);
@@ -285,6 +311,11 @@ main {
     display: flex;
     align-items: center;
     gap: 2rem;
+}
+@media (max-width: 768px){
+    .contenido-gasto {
+        flex-direction: column;
+    }
 }
 
 .contenido-gasto img {
@@ -379,7 +410,15 @@ body .modal {
 .modal label {
     text-align: left;
 }
-
+@media (max-width: 768px){
+    .modal .formulario{
+        width: 35rem;
+        
+    }
+    .modal .formulario.animar{
+        top: 10rem;
+    }
+}
 .CircularProgressbar .CircularProgressbar-text {
     font-size: 1rem !important;
 }
