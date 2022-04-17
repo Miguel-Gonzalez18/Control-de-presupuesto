@@ -65,7 +65,7 @@ header h1 {
 }
 
 .formulario {
-    width: 95%;
+    width: 100%;
     margin: 0 auto;
     padding: 10rem 0;
 }
@@ -99,7 +99,17 @@ header h1 {
     text-align: center;
     margin-bottom: 2rem;
 }
-
+@media (max-width: 768px){
+    .formulario label {
+        color: var(--azul);
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    .formulario legend {
+        font-size: 3rem;
+    }
+}
 .formulario input[type="text"],
 .formulario input[type="number"] {
     background-color: var(--gris-claro);
@@ -118,7 +128,7 @@ header h1 {
     color: var(--blanco);
     font-weight: 900;
     text-transform: uppercase;
-    font-size: 1.9rem;
+    font-size: 1.1rem;
     width: 100%;
     transition: background-color 300ms ease;
 }
@@ -126,6 +136,7 @@ header h1 {
     .formulario input[type="submit"] {
         display: block;
         padding: 1rem 5rem;
+        font-size: 1.9rem;
     }
 }
 .formulario input[type="submit"]:hover {
@@ -156,8 +167,11 @@ header h1 {
     border-left: 5px solid #b91c1c;
     color: #b91c1c;
 }
-
-
+@media (max-width: 768px) {
+    .alerta {
+        font-size: 1.5rem;
+    }
+}
 .contenedor {
     width: 90%;
     max-width: 80rem;
@@ -196,7 +210,13 @@ header h1 {
     font-size: 2.8rem;
     text-align: center;
 }
-
+@media (max-width: 768px){
+    .formulario input[type="text"].nuevo-presupuesto, 
+    .formulario input[type="number"].nuevo-presupuesto {
+        font-size: 2rem;
+        text-align: center;
+    }
+}
 .contenedor-presupuesto svg {
     width: 25rem;
 }
@@ -412,11 +432,11 @@ body .modal {
 }
 @media (max-width: 768px){
     .modal .formulario{
-        width: 35rem;
+        width: 30rem;
         
     }
     .modal .formulario.animar{
-        top: 10rem;
+        top: 5rem;
     }
 }
 .CircularProgressbar .CircularProgressbar-text {
