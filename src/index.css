@@ -435,8 +435,11 @@ body .modal {
         width: 30rem;
         
     }
-    .modal .formulario.animar{
-        top: 5rem;
+    .modal .cerrar-modal img {
+        width: 80%;
+    }
+    .modal .cerrar-modal{
+        z-index: 1;
     }
 }
 .CircularProgressbar .CircularProgressbar-text {
